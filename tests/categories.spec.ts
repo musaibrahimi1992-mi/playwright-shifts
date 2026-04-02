@@ -27,4 +27,9 @@ test.describe('Category groups', () => {
     await shifts.goto();
     await shifts.expectVisible(CATEGORIES.werkstattmitarbeiter);
   });
+  test('artur gjonaj should show phone number', async ({ page }) => {
+    const shifts = new ShiftsPage(page);
+    await shifts.goto();
+    await shifts.expectVisible('0676322033');
+    });
 });

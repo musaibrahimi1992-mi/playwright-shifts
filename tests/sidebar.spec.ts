@@ -27,6 +27,15 @@ test.describe('Sidebar menu', () => {
     const shifts = new ShiftsPage(page);
     await shifts.goto();
     await shifts.kapazitaetsplanungMenu.click();
+    await page.waitForTimeout(500);
     await expect(shifts.abwesenheitenMenuItem).toBeVisible();
-  });
+    });
+
+  test('produktivitatsfaktor visible in sidebar', async ({ page }) => {
+    const shifts = new ShiftsPage(page);
+    await shifts.goto();
+    await shifts.kapazitaetsplanungMenu.click();
+    await shifts.expectVisible('Produktivitätsfaktor');
+});
+  
 });
