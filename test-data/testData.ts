@@ -1,6 +1,6 @@
 export const CREDENTIALS = {
   username: 'AutomationTester',
-  password: 'JJDlSvNh6cej3cxv!',
+  password: process.env.TEST_PASSWORD || 'JJDlSvNh6cej3cxv!',
 };
 
 export const EMPLOYEES = {
