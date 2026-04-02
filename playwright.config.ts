@@ -8,10 +8,11 @@ export default defineConfig({
   reporter: 'html',
   timeout: 30000,
   use: {
-    headless: false,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-  },
+  baseURL: 'https://werkstattplanung.net/demo/api/kic/da/index.html',
+  headless: true,
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+},
   projects: [
     {
       name: 'chromium',
